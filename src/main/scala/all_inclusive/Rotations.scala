@@ -6,11 +6,8 @@ object Rotations {
   }
 
   def containAllRots(strng: String, arr: List[String]): java.lang.Boolean = {
-    val allRotations =
-      for(i <- 0 until strng.length) yield {rotate(strng, i)}
-
-    !(for(rotation <- allRotations) yield {
-        arr.contains(rotation)
-     }).contains(false)
+    !(for(i <- 0 until strng.length) yield {rotate(strng, i)})
+        .map(rotation => arr.contains(rotation))
+        .contains(false)
   }
 }
