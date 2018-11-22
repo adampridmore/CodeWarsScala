@@ -7,7 +7,6 @@ object Rotations {
   }
 
   def containAllRots(strng: String, arr: List[String]): java.lang.Boolean = {
-
     (for (i <- 0 until strng.length) yield rotate(strng, i))
       .forall(rotation => arr.contains(rotation))
   }
