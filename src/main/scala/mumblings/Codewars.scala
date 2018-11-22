@@ -1,5 +1,6 @@
 package mumblings
 
+// https://www.codewars.com/kata/mumbling/train/scala
 object Codewars {
   def accum(inputString: String): String = {
     def toMumbleWord(letter: Char, position: Int) = {

@@ -1,7 +1,9 @@
+
 package mumblings
 
 import org.scalatest.FunSpec
 
+// https://www.codewars.com/kata/mumbling/train/scala
 class ExampleTests extends FunSpec {
   describe("Codewars.accum") {
 
