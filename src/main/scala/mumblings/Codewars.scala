@@ -7,12 +7,10 @@ object Codewars {
       (letter.toString * position).capitalize
     }
 
-    val mumbleWords =
-      inputString
-        .toLowerCase
-        .toCharArray
-        .zipWithIndex.map { case (char: Char, characterIndex: Int) => toMumbleWord(char, characterIndex + 1) }
-
-    mumbleWords.mkString("-")
+    inputString
+      .toLowerCase
+      .toCharArray
+      .zipWithIndex.map { case (char: Char, characterIndex: Int) => toMumbleWord(char, characterIndex + 1) }
+      .mkString("-")
   }
 }
