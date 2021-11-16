@@ -1,11 +1,15 @@
 package sumoffirstnterms
 
 import org.scalatest._
+import flatspec._
+import matchers._
+import org.scalatest.flatspec.AnyFlatSpec
+
 import scala.BigDecimal._
 import scala.collection.immutable.Range.BigDecimal._
 
 // From: https://www.codewars.com/kata/555eded1ad94b00403000071/train/scala
-class sumOfFirstNTerms extends FlatSpec with Matchers {
+class sumOfFirstNTerms extends AnyFlatSpec with should.Matchers {
 
   def seriesSum(n: Int): String = {
     val sum =

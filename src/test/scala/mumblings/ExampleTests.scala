@@ -1,10 +1,13 @@
 
 package mumblings
 
-import org.scalatest.FunSpec
+import org.scalatest._
+import flatspec._
+import matchers._
+import org.scalatest.funspec.AnyFunSpec
 
 // https://www.codewars.com/kata/mumbling/train/scala
-class ExampleTests extends FunSpec {
+class ExampleTests extends AnyFunSpec {
   describe("Codewars.accum") {
 
     it("should encode single letter A"){

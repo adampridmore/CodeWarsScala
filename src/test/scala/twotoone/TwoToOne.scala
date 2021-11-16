@@ -1,11 +1,13 @@
 package twotoone
 
 import org.scalatest._
+import flatspec._
+import matchers._
 
 // From:
-//https://www.codewars.com/kata/two-to-one/train/scala
+// https://www.codewars.com/kata/two-to-one/train/scala
 
-class TwoToOne extends FlatSpec with Matchers {
+class TwoToOne extends AnyFlatSpec with should.Matchers {
   def longest(s1: String, s2: String): String = {
     (s1 + s2)
       .toCharArray

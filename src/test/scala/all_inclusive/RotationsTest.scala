@@ -1,11 +1,16 @@
 package all_inclusive
 
-import all_inclusive.RotationsTest.testing
-import org.scalatest.Assertions._
 import org.scalatest._
+import flatspec._
+import matchers._
 
 // https://www.codewars.com/kata/all-inclusive/train/scala
-class RotationsTest extends FlatSpec with Matchers{
+class RotationsTest extends AnyFlatSpec with should.Matchers {
+
+  def testing(act: Boolean, exp: Boolean): Unit = {
+    assertResult(exp){act}
+  }
+
   it should "pass basic tests a" in {
     var a = List("bsjq", "qbsj", "sjqb", "twZNsslC", "jqbs")
     testing(Rotations.containAllRots("bsjq", a), true)
@@ -33,11 +38,5 @@ class RotationsTest extends FlatSpec with Matchers{
 
   it should "rotate string by 2" in {
     Rotations.rotate("ABC", 2) should be ("CAB")
-  }
-}
-
-object RotationsTest {
-  def testing(act: Boolean, exp: Boolean): Unit = {
-    assertResult(exp){act}
   }
 }

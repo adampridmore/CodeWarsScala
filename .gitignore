@@ -4,3 +4,4 @@ metals.sbt
 .bloop
 target
 .DS_Store
+.bsp
