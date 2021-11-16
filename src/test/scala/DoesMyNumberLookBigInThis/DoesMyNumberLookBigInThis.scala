@@ -11,10 +11,11 @@ import scala.annotation.tailrec
 
 object Kata {
   def narcissistic(n: Int): Boolean = {
-    
-    val digits = n.toString.map(_.toString.toInt)
-            
-    val powSum = digits.fold(0)((acc, digit) => acc + (Math.pow(digit, digits.length)).toInt)
+    val str = n.toString
+       
+    val powSum = str
+      .map(chr => Math.pow(chr.asDigit, str.length).toInt)
+      .sum
     
     powSum == n
   }
